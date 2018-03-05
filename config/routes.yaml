@@ -1,0 +1,7 @@
+index:
+    path: /
+    defaults: { _controller: 'App\Controller\DefaultController::index' }
+
+landing_page:
+    path: /landing-page
+    defaults: { _controller: 'App\Controller\DefaultController::landingPage' }

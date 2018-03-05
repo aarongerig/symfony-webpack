@@ -1,0 +1,139 @@
+// Background
+@mixin hook-background-misc() {
+  @media (max-width: $breakpoint-large) {
+    background-image: none !important;
+  }
+}
+
+// Base
+@mixin hook-base-body() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@mixin hook-base-h1() {
+  font-weight: 600;
+  letter-spacing: 0.75px;
+}
+
+@mixin hook-base-h6() {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+}
+
+// Button
+@mixin hook-button() {
+  transition: 0.25s ease-in-out;
+  transition-property: color, background-color, background-position, border-color, box-shadow;
+  font-family: 'Barlow Semi' Condensed;
+  font-weight: 400;
+  letter-spacing: 0.35px;
+  background-origin: border-box;
+  background-size: calc(200% + 1px);
+  background-position-x: calc(100% + 1px);
+}
+
+@mixin hook-button-hover() {
+  background-position-x: 0;
+}
+
+@mixin hook-button-focus() {
+  background-position-x: 0;
+}
+
+@mixin hook-button-default() {
+  border: $button-border-width solid $button-default-border;
+  background-image: linear-gradient(90deg, $color-secondary 50%, transparent 50%);
+}
+
+@mixin hook-button-default-hover() {
+  background-image: linear-gradient(90deg, $color-secondary 50%, transparent 50%);
+}
+
+@mixin hook-button-default-active() {
+  background-image: linear-gradient(90deg, $color-dark 0, $color-black 100%);
+}
+
+@mixin hook-inverse-button-default() {
+  border-color: $inverse-global-color;
+  background-image: none;
+}
+
+@mixin hook-inverse-button-default-active() {
+  border-color: rgba($color-white, 0.8);
+}
+
+// Dotnav
+@mixin hook-dotnav-item() {
+  transition: 0.2s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  border: $dotnav-item-border-width solid $dotnav-item-border;
+}
+
+@mixin hook-inverse-dotnav-item() {
+  border-color: rgba($inverse-global-color, 0.3);
+}
+
+@mixin hook-inverse-dotnav-item-hover() {
+  border-color: $color-white;
+}
+
+@mixin hook-inverse-dotnav-item-onclick() {
+  border-color: $color-primary;
+}
+
+@mixin hook-inverse-dotnav-item-active() {
+  border-color: $color-primary;
+}
+
+// Heading
+@mixin hook-heading-primary() {
+  color: $color-secondary;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+}
+
+@mixin hook-heading-hero() {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+// Navbar
+@mixin hook-navbar-nav-item() {
+  transition: 0.1s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  letter-spacing: 0.35px;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    bottom: 25px;
+    height: 1px;
+    background-color: transparent;
+    transition: 0.1s ease-in-out;
+    transition-property: background-color, border-color, box-shadow, height, right;
+    left: 15px;
+    right: calc(102% - 15px);
+  }
+}
+
+@mixin hook-navbar-nav-item-active() {
+  &::before {
+    right: 15px;
+    background-color: $color-primary;
+  }
+}
+
+@mixin hook-navbar-sticky() {
+  box-shadow: 2px 12px 32px rgba(0, 0, 0, 0.06);
+}

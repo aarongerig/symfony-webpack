@@ -1,0 +1,190 @@
+//
+// Component:       Variables
+// Description:     Defines common values which are used across all components
+//
+// ========================================================================
+
+
+// Breakpoints
+// ========================================================================
+
+// Phone Portrait:   Galaxy (360x640), iPhone 6 (375x667), iPhone 6+ (414x736)
+// Phone Landscape:  Galaxy (640x360), iPhone 6 (667x375), iPhone 6+ (736x414)
+// Tablet Portrait:  iPad (768x1024), Galaxy Tab (800x1280),
+// Tablet Landscape: iPad (1024x768), iPad Pro (1024x1366),
+// Desktop:          Galaxy Tab (1280x800), iPad Pro (1366x1024)
+
+$breakpoint-small:                              640px !default;  // Phone landscape
+$breakpoint-medium:                             960px !default;  // Tablet Landscape
+$breakpoint-large:                              1200px !default; // Desktop
+$breakpoint-xlarge:                             1600px !default; // Large Screens
+
+$breakpoint-xsmall-max:                         ($breakpoint-small - 1) !default;
+$breakpoint-small-max:                          ($breakpoint-medium - 1) !default;
+$breakpoint-medium-max:                         ($breakpoint-large - 1) !default;
+$breakpoint-large-max:                          ($breakpoint-xlarge - 1) !default;
+
+
+// Global variables
+// ========================================================================
+
+//
+// Typography
+//
+
+$global-font-family:                             'Barlow', sans-serif !default;
+$global-font-size:                               16px !default;
+$global-line-height:                             1.5 !default;      // 24px
+
+$global-xxlarge-font-size:                       3.375rem !default; // 54px
+$global-xlarge-font-size:                        2rem !default;     // 32px
+$global-large-font-size:                         1.75rem !default;  // 28px
+$global-medium-font-size:                        1.5rem !default;   // 24px
+$global-small-font-size:                         0.875rem !default; // 14px
+
+//
+// Colors
+//
+
+$global-color:                                   #444 !default;
+$global-emphasis-color:                          #333 !default;
+$global-muted-color:                             #999 !default;
+
+$global-link-color:                              $color-primary !default;
+$global-link-hover-color:                        darken($color-primary, 10%) !default;
+
+$global-inverse-color:                           #fff !default;
+
+//
+// Backgrounds
+//
+
+$global-background:                              #fff !default;
+
+$global-muted-background:                        #f8f8f8 !default;
+$global-primary-background:                      $color-primary !default;
+$global-secondary-background:                    $color-secondary !default;
+
+$global-success-background:                      #32d296 !default;
+$global-warning-background:                      #faa05a !default;
+$global-danger-background:                       #f0506e !default;
+
+//
+// Borders
+//
+
+$global-border-width:                            1px !default;
+$global-border:                                  #e5e5e5 !default;
+
+//
+// Box-Shadows
+//
+
+$global-small-box-shadow:                        0 2px 8px rgba(0,0,0,0.08) !default;
+$global-medium-box-shadow:                       0 5px 15px rgba(0,0,0,0.08) !default;
+$global-large-box-shadow:                        0 14px 25px rgba(0,0,0,0.16) !default;
+$global-xlarge-box-shadow:                       0 28px 50px rgba(0,0,0,0.16) !default;
+
+//
+// Spacings
+//
+
+// Used in margin, section, list
+$global-margin:                                  20px !default;
+$global-small-margin:                            10px !default;
+$global-medium-margin:                           40px !default;
+$global-large-margin:                            70px !default;
+$global-xlarge-margin:                           140px !default;
+
+// Used in grid, column, container, align, card, padding
+$global-gutter:                                  30px !default;
+$global-small-gutter:                            15px !default;
+$global-medium-gutter:                           40px !default;
+$global-large-gutter:                            70px !default;
+
+//
+// Controls
+//
+
+$global-control-height:                          40px !default;
+$global-control-small-height:                    30px !default;
+$global-control-large-height:                    55px !default;
+
+//
+// Z-index
+//
+
+$global-z-index:                                 1000 !default;
+
+
+//
+// Overwrites
+//
+
+// Base
+$base-h6-font-size:                              12px;
+$base-h6-line-height:                            1.3;
+$base-selection-background:                      $color-primary;
+$base-link-text-decoration:                      underline;
+$base-link-hover-text-decoration:                none;
+$inverse-base-link-hover-color:                  rgba($color-white, .7);
+
+// Button
+$button-padding-horizontal:                      20px;
+$button-font-size:                               1rem;
+
+$button-default-color:                           $color-secondary;
+$button-default-border:                          $color-secondary;
+$button-default-hover-color:                     $color-white;
+$button-default-hover-border:                    $color-secondary;
+$button-default-active-color:                    rgba($color-white, .8);
+$button-default-active-border:                   $color-secondary;
+$inverse-button-default-hover-background:        $color-white;
+$inverse-button-default-hover-color:             $color-secondary;
+$inverse-button-default-active-background:       rgba($color-white, .8);
+$inverse-button-default-active-color:            $color-secondary;
+
+// Container
+$container-max-width:                            1360px;
+
+// Dotnav
+$dotnav-item-width:                              12px;
+$dotnav-item-border:                             rgba($color-secondary, .3);
+$inverse-dotnav-item-hover-background:           transparent;
+$inverse-dotnav-item-onclick-background:          transparent;
+$inverse-dotnav-item-active-background:          transparent;
+
+// Heading
+$heading-primary-font-size:                      3.375rem;
+$heading-primary-font-size-m:                    4.5rem;
+
+$heading-hero-font-size:                         3.375rem;
+$heading-hero-font-size-s:                       4.5rem;
+$heading-hero-font-size-m:                       5.75rem;
+
+$heading-line-width:                             80px;
+$heading-line-border:                            $color-primary;
+$inverse-heading-line-border:                    $color-primary;
+$inverse-link-heading-hover-color:               rgba($color-white, .7);
+
+// Inverse
+$inverse-global-muted-color:                     $color-white;
+
+// Nav
+$nav-primary-item-hover-color:                   $color-primary;
+$nav-primary-item-active-color:                  $color-black;
+
+// Navbar
+$navbar-background:                              $color-white;
+$navbar-nav-item-font-size:                      1rem;
+$navbar-nav-item-font-family:                    'Barlow Semi Condensed', sans-serif;
+$inverse-navbar-nav-item-color:                  rgba($color-white, .7);
+
+// Offcanvas
+$offcanvas-bar-background:                       $color-white;
+$offcanvas-bar-color-mode:                       dark;
+
+// Text
+$text-lead-font-size:                            20px;
+$text-lead-color:                                $color-secondary;
+$inverse-text-muted-color:                       rgba($color-white, .45);
